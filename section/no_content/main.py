@@ -1,16 +1,16 @@
 users_db = []
 
-def register_user(___):
-    if ___:
-        ___ "Registration failed: age must be 18 or older."
+def register_user(username, email, age):
+    if age < 18:
+        return "Registration failed: age must be 18 or older."
     
-    user = {"username": ___, "email": ___, "age": ___}
-    users_db.___(___)
+    user = {"username": username, "email": email, "age": age}
+    users_db.append(user)
     
-    ___ f"User {username} registered successfully!"
+    return f"User {username} registered successfully!"
 
 # Pass the parameters in any way to register a user
-result1 = register_user(___)
+result1 = register_user(username="Alex", email="alex@mail.com", age=23)
 
 # Testing the result
 print(result1)
